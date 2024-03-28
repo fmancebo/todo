@@ -45,13 +45,13 @@
   }
 }
 
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 406px) {
   .new-todo {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 362px) {
+@media screen and (max-width: 367px) {
   .new-todo {
     font-size: 0.8rem;
   }
