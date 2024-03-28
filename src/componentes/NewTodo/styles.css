@@ -33,31 +33,25 @@
   border: 2px solid #4CAF50;
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 472px) {
   .new-todo {
     font-size: 1.4rem;
   }
 }
 
-@media screen and (max-width: 446px) {
-  .new-todo {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 449px) {
   .new-todo {
     font-size: 1.2rem;
   }
 }
 
-@media screen and (max-width: 406px) {
+@media screen and (max-width: 405px) {
   .new-todo {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 367px) {
+@media screen and (max-width: 362px) {
   .new-todo {
     font-size: 0.8rem;
   }
