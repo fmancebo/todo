@@ -33,12 +33,17 @@
   border: 2px solid #4CAF50;
 }
 
+@media screen and (max-width: 468px) {
+  .new-todo {
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (max-width: 446px) {
   .new-todo {
     font-size: 1.3rem;
   }
 }
-
 
 @media screen and (max-width: 427px) {
   .new-todo {
@@ -62,6 +67,10 @@
 @media screen and (max-width: 367px) {
   .new-todo {
     font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 1.1rem;
   }
 }
 
