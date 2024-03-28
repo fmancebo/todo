@@ -1,6 +1,6 @@
 {
-  "short_name": "Minha Aplicaçao",
-  "name": "Aplicaçao do curso",
+  "short_name": "Todo List",
+  "name": "To do List",
   "icons": [
     {
       "src": "favicon.ico",
