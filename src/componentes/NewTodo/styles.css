@@ -33,19 +33,27 @@
   border: 2px solid #4CAF50;
 }
 
-@media screen and (max-width: 472px) {
+@media screen and (max-width: 446px) {
   .new-todo {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 449px) {
+
+@media screen and (max-width: 427px) {
   .new-todo {
     font-size: 1.2rem;
   }
 }
 
+
 @media screen and (max-width: 406px) {
+  .new-todo {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 386px) {
   .new-todo {
     font-size: 1rem;
   }
@@ -53,6 +61,18 @@
 
 @media screen and (max-width: 367px) {
   .new-todo {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 346px) {
+  .new-todo {
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 327px) {
+  .new-todo {
+    font-size: 0.7rem;
   }
 }
