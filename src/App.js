@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/global.css';
 import NewTodo from './componentes/NewTodo';
 import TodoList from './componentes/TodoLIst';
 
 function App() {
   const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('todoList', JSON.stringify(todos));
+  }, [todos]);
 
   const onNewTodo = (value) => {
     setTodos([
@@ -29,7 +33,9 @@ function App() {
         <h1 className="title">To do list</h1>
       </header>
       <section className="main">
-        <NewTodo onNewTodo={onNewTodo} />
+        <div className="input-container">
+          <NewTodo onNewTodo={onNewTodo} />
+        </div>
         <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
       </section>
     </section>

@@ -32,7 +32,7 @@ function NewTodo({ onNewTodo }) {
   };
 
   return (
-    <div>
+    <div className="container">
       <input
         className="new-todo"
         placeholder="O que precisa ser feito?"
@@ -40,6 +40,9 @@ function NewTodo({ onNewTodo }) {
         onChange={onChange}
         onKeyDown={onKeyDown}
       />
+      <button type="button" className="button" onClick={submit}>
+        Add
+      </button>
     </div>
   );
 }

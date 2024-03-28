@@ -1,8 +1,52 @@
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .new-todo {
+  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.03);
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
   font-size: 1.5rem;
   font-style: italic;
-  width: 100%;
-  padding: 16px 16px 18px 16px;
+  padding: 16px;
+  border: none;
+}
+
+.button {
+  padding: 14px;
+  font-size: 1.5rem;
+  background-color: #4CAF50;
+  border: 2px solid transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+@media screen and (max-width: 475px) {
+  .new-todo {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .new-todo {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .new-todo {
+    font-size: 0.8rem;
+  }
 }
