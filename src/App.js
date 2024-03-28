@@ -7,6 +7,14 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
+    const savedTodos = localStorage.getItem('todoList');
+    if (savedTodos) {
+      setTodos(JSON.parse(savedTodos));
+    }
+  }, []);
+  // Passar um array vazio como dependência faz com que este useEffect seja executado apenas uma vez
+
+  useEffect(() => {
     localStorage.setItem('todoList', JSON.stringify(todos));
   }, [todos]);
 
