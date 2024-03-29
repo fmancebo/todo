@@ -32,7 +32,7 @@ function NewTodo({ onNewTodo }) {
   };
 
   return (
-    <div className="container">
+    <div className="container-input">
       <input
         className="new-todo"
         placeholder="O que precisa ser feito?"

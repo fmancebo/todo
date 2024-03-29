@@ -75,9 +75,7 @@ textarea {
 }
 
 .title {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+  position: static;
   color: #1a2b4c;
   font-size: 64px;
   font-weight: 100;
