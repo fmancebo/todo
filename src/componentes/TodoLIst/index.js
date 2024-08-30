@@ -1,37 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MdDelete } from 'react-icons/md';
-import './styles.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { MdDelete } from "react-icons/md";
 
-function TodoList({ todos, onToggle, onRemove }) {
+import { List, ItemList, Dados, BtnClear } from "./styles";
+
+function TodoList({ todos, onToggle, onRemove, onRemoveResolved }) {
+  const hasItems = todos.length > 0;
   return (
-    <ul className="todo-list">
+    <List>
       {todos.map((todo) => (
-        <li key={todo.id.toString()}>
-          <span
-            className={['todo', todo.checked ? 'checked' : ''].join(' ')}
+        <ItemList key={todo.id.toString()}>
+          <Dados
+            className={["todo", todo.checked ? "checked" : ""].join(" ")}
             onClick={() => onToggle && onToggle(todo)}
             onKeyDown={(event) => {
-              if (event.key === 'Enter') {
+              if (event.key === "Enter") {
                 onToggle(todo);
               }
             }}
-            role="button"
+            role='button'
             tabIndex={0}
           >
             {todo.title}
-          </span>
+          </Dados>
           <button
-            className="remove"
-            type="button"
-            aria-label="Delete"
+            className='remove'
+            type='button'
+            aria-label='Delete'
             onClick={() => onRemove && onRemove(todo)}
           >
             <MdDelete size={28} />
           </button>
-        </li>
+        </ItemList>
       ))}
-    </ul>
+      {hasItems && (
+        <BtnClear onClick={onRemoveResolved}>
+          Remover Resolvidos
+          <MdDelete size={20} />
+        </BtnClear>
+      )}
+    </List>
   );
 }
 
@@ -41,10 +49,11 @@ TodoList.propTypes = {
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       checked: PropTypes.bool.isRequired,
-    })
+    }),
   ).isRequired,
   onToggle: PropTypes.func.isRequired,
   onRemove: PropTypes.func.isRequired,
+  onRemoveResolved: PropTypes.func.isRequired,
 };
 
 export default TodoList;

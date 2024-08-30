@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './styles.css';
+/* eslint-disable no-alert */
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { MdAddToPhotos } from "react-icons/md";
+import { Container, InputTodo, ButtonInput } from "./styles";
 
 function NewTodo({ onNewTodo }) {
   const SCAPE_KEY = 27;
   const ENTER_KEY = 13;
 
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const erase = () => {
-    setValue('');
+    setValue("");
   };
 
   const submit = () => {
+    if (value.trim() === "") {
+      alert("Por favor, insira um item antes de adicionar.");
+      return;
+    }
+
     if (onNewTodo) {
       onNewTodo(value);
       erase();
@@ -32,18 +39,19 @@ function NewTodo({ onNewTodo }) {
   };
 
   return (
-    <div className="container-input">
-      <input
-        className="new-todo"
-        placeholder="O que precisa ser feito?"
+    <Container>
+      <InputTodo
+        className='new-todo'
+        placeholder='O que preciso?'
         value={value}
         onChange={onChange}
         onKeyDown={onKeyDown}
+        required
       />
-      <button type="button" className="button" onClick={submit}>
-        Add
-      </button>
-    </div>
+      <ButtonInput type='button' className='button' onClick={submit}>
+        <MdAddToPhotos style={{ height: "35px", width: "35px" }} />
+      </ButtonInput>
+    </Container>
   );
 }
 NewTodo.propTypes = {
