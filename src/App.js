@@ -13,7 +13,7 @@ function App() {
 
   // Atualiza o localStorage sempre que o estado todos mudar
   useEffect(() => {
-    console.log("Dados salvos no localStorage:", todos);
+    // console.log("Dados salvos no localStorage:", todos);
     localStorage.setItem("todoList", JSON.stringify(todos));
   }, [todos]);
 
