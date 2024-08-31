@@ -26,7 +26,7 @@ export const ItemList = styled.li`
   width: 100%;
   font-weight: bold;
   align-items: center;
-  background-color: rgba(224, 224, 224, 0.5);
+  background-color: rgba(224, 224, 224, 0.8);
   backdrop-filter: blur(20px);
   padding: 0.5rem;
   border: 1px solid #1d1e21;
