@@ -26,7 +26,7 @@ export const ItemList = styled.li`
   width: 100%;
   font-weight: bold;
   align-items: center;
-  background-color: #e0e0e033;
+  background-color: rgba(224, 224, 224, 0.5);
   backdrop-filter: blur(20px);
   padding: 0.5rem;
   border: 1px solid #1d1e21;
@@ -40,7 +40,7 @@ export const ItemList = styled.li`
   }
 
   .todo.checked {
-    color: #b2bec3;
+    color: #7d898d;
     text-decoration: line-through;
   }
 
@@ -67,25 +67,29 @@ export const Dados = styled.span`
   word-break: break-all;
   transition: color 0.3s;
 `;
-export const BtnClear = styled.button`
-  display: flex;
-  margin-top: 1.5rem;
-  width: auto;
-  font-weight: bold;
-  align-items: center;
-  background-color: #dbefef;
-  backdrop-filter: blur(20px);
-  border: 1px solid #1d1e21;
-  margin-bottom: 5px;
-  box-shadow: 0px 0px 1px 1px #cd0000;
+export const BtnClearCont = styled.button`
+  background-color: transparent;
+  border: none;
+  color: #690004;
   cursor: pointer;
+  outline: none;
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
   transition: 0.3s ease;
 
-  &:hover {
-    scale: calc(101%);
-  }
-  &:active {
-    box-shadow: 0px 0px 10px 1px #cd0000;
-    background-color: #cd000033;
+  .remove {
+    background-color: transparent;
+    border: none;
+    color: #690004;
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+
+    &:active {
+      animation: ${rotate} 0.5s ease-in-out;
+      color: red;
+      cursor: pointer;
+    }
   }
 `;

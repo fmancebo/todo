@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MdDelete } from "react-icons/md";
 
-import { List, ItemList, Dados, BtnClear } from "./styles";
+import { List, ItemList, Dados, BtnClearCont } from "./styles";
 
 function TodoList({ todos, onToggle, onRemove, onRemoveResolved }) {
   const hasItems = todos.length > 0;
@@ -34,10 +34,11 @@ function TodoList({ todos, onToggle, onRemove, onRemoveResolved }) {
         </ItemList>
       ))}
       {hasItems && (
-        <BtnClear onClick={onRemoveResolved}>
-          Remover Resolvidos
-          <MdDelete size={20} />
-        </BtnClear>
+        <BtnClearCont>
+          <button className='remove' type='button' aria-label='Delete' onClick={onRemoveResolved}>
+            <MdDelete size={36} />
+          </button>
+        </BtnClearCont>
       )}
     </List>
   );
