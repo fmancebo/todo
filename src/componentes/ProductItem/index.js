@@ -21,14 +21,15 @@ function ProductItem({ quantity, description, value, isChecked, onRemove, onTogg
         </div>
         <div>
           {isChecked ? (
-            <MdDelete
-              size={24}
-              onClick={(e) => {
-                e.stopPropagation(); // Impede que o clique no ícone acione o clique do item
-                if (onRemove) onRemove(); // Garante que a função seja chamada apenas se estiver definida
-              }}
-              style={{ cursor: "pointer", color: "red", marginLeft: "25px" }}
-            />
+            <button className='remove' type='button' aria-label='Delete'>
+              <MdDelete
+                size={24}
+                onClick={(e) => {
+                  e.stopPropagation(); // Impede que o clique no ícone acione o clique do item
+                  if (onRemove) onRemove(); // Garante que a função seja chamada apenas se estiver definida
+                }}
+              />
+            </button>
           ) : (
             <span>{currencyFormat(total)}</span>
           )}

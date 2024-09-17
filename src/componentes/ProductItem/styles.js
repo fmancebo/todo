@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const rotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -37,6 +49,21 @@ const Wrapper = styled.div`
       text-decoration: line-through;
 
     `}
+  .remove {
+    background-color: transparent;
+    border: none;
+    color: #690004;
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+    margin-left: 20px;
+
+    &:active {
+      animation: ${rotate} 0.5s ease-in-out;
+      color: red;
+      cursor: pointer;
+    }
+  }
 `;
 
 export { Container, Wrapper };
