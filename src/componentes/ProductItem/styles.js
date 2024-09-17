@@ -24,7 +24,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: grid;
   padding: 10px 20px;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
   font-size: 1.3rem;
   align-items: center;
