@@ -49,7 +49,7 @@ function NewTodo({ onNewTodo }) {
         required
       />
       <ButtonInput type='button' className='button' onClick={submit}>
-        <MdAddToPhotos style={{ height: "35px", width: "35px" }} />
+        <MdAddToPhotos size='35px' />
       </ButtonInput>
     </Container>
   );

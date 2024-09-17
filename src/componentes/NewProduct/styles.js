@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   height: 50px;
-  align-items: center;
+  width: 100vw;
   justify-content: center;
   flex-direction: row;
+  background-color: #fff;
   background-color: rgba(0, 0, 0, 0.03);
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
   padding: 0 20px;
@@ -13,14 +14,38 @@ export const Container = styled.div`
   z-index: 0;
 `;
 
-export const InputTodo = styled.input`
+export const Wrapper = styled.div`
+  width: 550px;
   display: flex;
-  width: 500px;
-  background-color: rgba(0, 0, 0, 0.001);
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const Label = styled.label`
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin: 0 auto;
+`;
+
+export const InputQuants = styled.input`
+  display: flex;
+  width: auto;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.003);
   font-size: 1.25rem;
   font-style: italic;
   line-height: 50px;
   border: none;
+  margin: 0 auto;
+  padding-left: 5px;
+
+  &::placeholder {
+    font-size: 1rem;
+    /* color: black; */
+    /* font-weight: bold; */
+  }
 `;
 
 export const ButtonInput = styled.button`

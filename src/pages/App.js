@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./styles/global.css";
-import Header from "./componentes/header";
-import NewTodo from "./componentes/NewTodo";
-import TodoList from "./componentes/TodoLIst";
+import "../styles/global.css";
+import Header from "../componentes/header";
+import NewTodo from "../componentes/NewTodo";
+import TodoList from "../componentes/TodoLIst";
 
 function App() {
   // Recupera os dados do localStorage e define o estado inicial

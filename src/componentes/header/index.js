@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlinePencilAlt, HiOutlineChevronDown } from "react-icons/hi";
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Container, Button, Dropdown, DropdownItem } from "./styles";
 
@@ -23,9 +25,14 @@ export default function Header({ onSortAsc, onSortDesc }) {
   return (
     <Container>
       <h1>
-        Your List
-        <HiOutlinePencilAlt style={{ marginLeft: "10px" }} />
+        <Link to='/'>
+          Sua Lista
+          <HiOutlinePencilAlt style={{ marginLeft: "10px" }} />
+        </Link>
       </h1>
+      <Link to='/market'>
+        <FaShoppingCart size={30} />
+      </Link>
       <div style={{ position: "relative" }}>
         <Button onClick={alternarMenu}>
           A-Z <HiOutlineChevronDown style={{ marginLeft: "5px" }} />

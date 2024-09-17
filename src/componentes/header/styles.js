@@ -11,6 +11,10 @@ export const Container = styled.div`
   position: sticky;
   justify-content: space-between;
   z-index: 3;
+
+  h1 {
+    flex: 1;
+  }
 `;
 
 export const Button = styled.button`
@@ -24,6 +28,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-left: 20px;
   font-size: 14px;
   position: relative;
 
