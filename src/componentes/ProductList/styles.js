@@ -13,7 +13,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: grid;
   padding: 10px 5px;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
   align-items: center;
   width: 95%;
